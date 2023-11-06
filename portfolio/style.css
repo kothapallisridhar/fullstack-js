@@ -1,0 +1,17 @@
+:root {
+  --bleached-silk: #f2f2f2;
+  --enchanted-Silver: #b5b4bf;
+  --shadow-warrior: #1a2226;
+  --high-salute: #425059;
+  --cool-concrete: #d9d0c1;
+}
+html {
+  box-sizing: border-box;
+}
+* *::before *::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--bleached-silk);
+}
