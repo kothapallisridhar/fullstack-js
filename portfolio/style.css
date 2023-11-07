@@ -13,5 +13,8 @@ html {
 }
 
 body {
-  background-color: var(--bleached-silk);
+  margin: 0;
+  padding: 0;
+  color: var(--shadow-warrior);
+  background-color: var(--cool-concrete);
 }
