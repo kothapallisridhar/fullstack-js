@@ -15,3 +15,5 @@ function square(el) {
 
 const result = arr.map(square);
 console.log(result);
+
+/** If the function that we are passing in map takes two arguments then the first argument will be a accessing the actual value and the second argument will be accessing index of that value. */
