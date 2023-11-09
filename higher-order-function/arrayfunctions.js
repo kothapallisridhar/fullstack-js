@@ -51,3 +51,9 @@ function sum(prevResult, currentValue) {
 }
 const res = arr4.reduce(sum);
 console.log("Result:", res);
+
+function product(prevResult, currentValue) {
+  return prevResult * currentValue;
+}
+const prodRes = arr4.reduce(product);
+console.log("Prod Val:", prodRes);
