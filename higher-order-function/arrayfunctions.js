@@ -23,3 +23,12 @@ function fun2(el, ind) {
 }
 arr2 = [15, 32, 66, 64, 83, 89];
 arr2.map(fun2);
+
+arr_tosort = [1, 3, 5, 18, 38, 4, 14, 8, 90, 67, 56, 54];
+
+const sorted = arr_tosort.sort((a, b) => {
+  // if a < b then a-b will be negative. If comparator function gives then a is placed before b (a < b).
+  return a - b;
+});
+
+console.log(sorted);
