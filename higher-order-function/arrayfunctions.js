@@ -46,8 +46,8 @@ console.log("Even Array", evenArray);
  */
 
 arr4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-function sum(prevValue, currentValue) {
-  return prevValue + currentValue;
+function sum(prevResult, currentValue) {
+  return prevResult + currentValue;
 }
 const res = arr4.reduce(sum);
 console.log("Result:", res);
