@@ -4,7 +4,7 @@
 // Higher Order Functions: These are functions that depends & operate on other function. Higher Order Functions takes another function as an argument or return a function as an argument.
 
 /**
- * map function
+ * map() function
  *
  */
 const arr = [1, 2, 3, 4, 5];
@@ -40,3 +40,14 @@ const evenArray = arr3.filter((el) => {
   return el % 2 == 0;
 });
 console.log("Even Array", evenArray);
+
+/**
+ * reduce(): reduces an array into a single value based on the function passed.
+ */
+
+arr4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function sum(prevValue, currentValue) {
+  return prevValue + currentValue;
+}
+const res = arr4.reduce(sum);
+console.log("Result:", res);
