@@ -32,3 +32,11 @@ const sorted = arr_tosort.sort((a, b) => {
 });
 
 console.log(sorted);
+/**
+ * filter(): filters out the array based on the function passed
+ */
+const arr3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const evenArray = arr3.filter((el) => {
+  return el % 2 == 0;
+});
+console.log("Even Array", evenArray);
