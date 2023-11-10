@@ -4,5 +4,5 @@ setTimeout(() => {
 /**
  *  Problems with Callbacks
  *  1. Inversion of Control
- *  2. Callback hell
+ *  2. Callback hell (It's a readability problem)
  */
