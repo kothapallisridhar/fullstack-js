@@ -2,7 +2,6 @@
  * JavaScript internally uses Abstract Operations
  * for type conversions
  */
-
 console.log(1 - 10); // -9
 console.log(1 - "453"); // 1- 453 = -452
 console.log(1 - null); // 1 - 0 = 1
