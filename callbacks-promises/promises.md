@@ -44,3 +44,7 @@ new Promise(function(resolve, reject) {
 PENDING -> value of Promise object -> undefined
 FULFILLED -> value of Promise object -> which is passed as argument to "resolve" function
 REJECTED -> value of Promise object -> which is passed as argument to "reject" function
+
+1. At the time the Constructor generates a new Promise object, it also generates a pair of functions called as "resolve" and "reject"
+2. Generally the executor callback wraps some async or synchronous operations.
+3. The executor is called synchronously.
