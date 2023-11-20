@@ -18,8 +18,17 @@
 
 /**
  *  1. How we can create a Promise?
+ *     Creation of the Promise object is synchronous in nature.
  *  2. How we can consume a Promise?
  *
  *  May be we fulfill the Promise!
  *  May be we don't fulfill the Promise!
+ *
+ *  Promise object states: PENDING, FULFILLED, REJECTED
+ *  When we create a new promise object, PENDING is the default state.
+ *
+ *  PENDING -> (work in progress)
+ *  FULFILLED -> if the operation is completed successfully
+ *  REJECTED -> if operatoin was not successful, then it will go in REJECTED
+ *              state
  */
