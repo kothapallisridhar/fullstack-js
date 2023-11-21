@@ -24,9 +24,31 @@ function writeFile(data, cb) {
     cb(fileName);
   }, 3000);
 }
+
+function upload(url, file, cb) {
+  /**
+   * uploads the data from a file to a url
+   */
+  console.log("Started uploading ", file, " on ", url);
+  setTimeout(function up() {
+    console.log("Upload completed");
+    const response = "SUCCESS";
+    cb(response);
+  });
+}
 // download("www.xyz.com", function process(content) {
 //   console.log("Downloaded data is: ", content);
 // });
-writeFile("ABCDEF", function process(name) {
-  console.log("File written with name: ", name);
+// writeFile("ABCDEF", function process(name) {
+//   console.log("File written with name: ", name);
+// });
+
+download("www.xyz.com", function processDownload(content) {
+  console.log("We are now going to process the downloaded data");
+  writeFile(content, function processWrite(fileName) {
+    console.log("We have downloaded and written the file. Now we will upload");
+    upload("www.upload.com", fileName, function processUpload(response) {
+      console.log("we have uplaoded with", response);
+    });
+  });
 });
