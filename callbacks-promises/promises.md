@@ -67,3 +67,9 @@ REJECTED -> value of Promise object -> which is passed as argument to "reject" f
 - At any point of time, if event loop has a choice to pick from "microtask queue"
   or "callback queue"(macrotask queue), then it always give preference to
   "microtask queue".
+
+# Priority Order
+
+Callstack > Microtask queue > Callback queue/ Macrotask queue
+(along with)
+Global code
