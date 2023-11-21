@@ -3,8 +3,8 @@ function fetchData(url) {
     console.log("Started downloading from url: ", url);
     setTimeout(function processDownloading() {
       let data = "Dummy Data";
-      resolve(data);
       console.log("Download Completed!");
+      resolve(data);
     }, 7000);
   });
 }
