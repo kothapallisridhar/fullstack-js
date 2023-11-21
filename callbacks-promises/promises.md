@@ -61,3 +61,9 @@ REJECTED -> value of Promise object -> which is passed as argument to "reject" f
 - We don't need to attach the functionality immediately.
 - p.then(fulfillmentHandler, rejectionHandler)
 - we have to implement the handler functions ourselves.
+
+# Microtask queue
+
+- At any point of time, if event loop has a choice to pick from "microtask queue"
+  or "callback queue"(macrotask queue), then it always give preference to
+  "microtask queue".
