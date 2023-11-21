@@ -16,6 +16,17 @@ function download(url, cb) {
   }, 3000);
 }
 
-download("www.xyz.com", function process(content) {
-  console.log("Downloaded data is: ", content);
+function writeFile(data, cb) {
+  console.log("Started writing file with data: ", data);
+  setTimeout(function write() {
+    console.log("Completed writing the data in a file");
+    const fileName = "file.txt";
+    cb(fileName);
+  }, 3000);
+}
+// download("www.xyz.com", function process(content) {
+//   console.log("Downloaded data is: ", content);
+// });
+writeFile("ABCDEF", function process(name) {
+  console.log("File written with name: ", name);
 });
