@@ -29,6 +29,8 @@
 - REJECTED -> if operatoin was not successful, then it will go in REJECTED
 -              state
 
+## CREATING A PROMISE
+
 new Promise(callback/executor)
 
 new Promise(function(resolve, reject) {
@@ -47,4 +49,15 @@ REJECTED -> value of Promise object -> which is passed as argument to "reject" f
 
 1. At the time the Constructor generates a new Promise object, it also generates a pair of functions called as "resolve" and "reject"
 2. Generally the executor callback wraps some async or synchronous operations.
-3. The executor is called synchronously.
+3. The "executor" is called "synchronously".
+
+-> Read MDN promise documentation
+
+## CONSUMING A PROMISE
+
+- Attach the functionality that we need to execute once the Promise is
+  FULFILLED OR REJECTED
+- We can attach the functionality after some time.
+- We don't need to attach the functionality immediately.
+- p.then(fulfillmentHandler, rejectionHandler)
+- we have to implement the handler functions ourselves.
