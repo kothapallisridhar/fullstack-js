@@ -34,7 +34,7 @@ function upload(url, file, cb) {
     console.log("Upload completed");
     const response = "SUCCESS";
     cb(response);
-  });
+  }, 3000);
 }
 // download("www.xyz.com", function process(content) {
 //   console.log("Downloaded data is: ", content);
