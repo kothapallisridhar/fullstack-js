@@ -4,6 +4,10 @@
   --shadow-warrior: #1a2226;
   --high-salute: #425059;
   --cool-concrete: #d9d0c1;
+  --teal: #008080;
+  --gold: #ffd700;
+  --beige: #f5f5dc;
+  --dukeblue: #012169;
 }
 html {
   box-sizing: border-box;
@@ -15,6 +19,45 @@ html {
 body {
   margin: 0;
   padding: 0;
-  color: var(--shadow-warrior);
-  background-color: var(--cool-concrete);
+  color: white;
+  background-color: var(--dukeblue);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+#intro {
+  padding-bottom: 5rem;
+}
+#intro p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+.name span {
+  display: block;
+  color: var(--gold);
+  font-size: 4rem;
+}
+.profile {
+  padding-bottom: 1rem;
+}
+#intro h2 {
+  font-size: 3rem;
+  font-weight: normal;
+}
+#experience ul {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+}
+#experience li {
+  list-style-type: none;
+  padding: 1rem;
+}
+#experience a {
+  color: white;
 }
