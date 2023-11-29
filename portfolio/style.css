@@ -10,6 +10,8 @@
   --dukeblue: #012169;
   --pennblue: #011f5b;
   --spacecadet: #1e2952;
+  --turquoise: #066464;
+  --cobalt: #033649;
 }
 html {
   box-sizing: border-box;
@@ -23,6 +25,9 @@ body {
   padding: 0;
   color: white;
   background-color: var(--spacecadet);
+}
+.section-turquoise {
+  background-color: var(--turquoise);
 }
 h1,
 h2,
@@ -64,7 +69,7 @@ h6 {
   color: white;
 }
 #hire {
-  background-color: var(--teal);
+  background-color: var(--turquoise);
   width: 400px;
   text-align: center;
   margin: 0 auto;
@@ -72,4 +77,31 @@ h6 {
 }
 #hire p:last-child {
   margin-top: 3rem;
+}
+nav {
+  font-size: 80%;
+  padding: 1rem;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+nav a:hover {
+  color: var(--beige);
+  text-decoration: underline;
+  font-size: 1.2rem;
+}
+nav li:first-child {
+  flex-grow: 1;
+  font-size: 1.5rem;
 }
