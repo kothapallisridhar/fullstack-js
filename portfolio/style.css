@@ -8,6 +8,8 @@
   --gold: #ffd700;
   --beige: #f5f5dc;
   --dukeblue: #012169;
+  --pennblue: #011f5b;
+  --spacecadet: #1e2952;
 }
 html {
   box-sizing: border-box;
@@ -20,7 +22,7 @@ body {
   margin: 0;
   padding: 0;
   color: white;
-  background-color: var(--dukeblue);
+  background-color: var(--spacecadet);
 }
 h1,
 h2,
@@ -60,4 +62,14 @@ h6 {
 }
 #experience a {
   color: white;
+}
+#hire {
+  background-color: var(--teal);
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+#hire p:last-child {
+  margin-top: 3rem;
 }
