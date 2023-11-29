@@ -2,6 +2,11 @@ class Product {
   #name;
   #price;
   description;
+  constructor(n, p, d) {
+    this.#name = n;
+    this.#price = p;
+    this.description = d;
+  }
   set name(n) {
     if (typeof n != "string") {
       console.log("invalid name passed");
