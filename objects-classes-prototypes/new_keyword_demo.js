@@ -12,5 +12,5 @@ class Product {
   }
   display() {}
 }
-const p = new Product("bag", 100, "a cool bag");
+const p = new Product("bag", 100, "cool new bag");
 console.log(p);
