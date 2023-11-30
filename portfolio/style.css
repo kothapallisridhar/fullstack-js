@@ -124,6 +124,14 @@ nav li:first-child {
     rgba(255, 147, 0, 1) 100%
   );
 }
+.gradient-section {
+  height: 2px;
+  background: white;
+}
+footer {
+  text-align: center;
+  padding: 2rem 0;
+}
 @media (min-width: 600px) {
   nav li:first-child {
     flex-grow: 1;
