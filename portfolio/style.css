@@ -38,7 +38,9 @@ h6 {
   margin: 0;
 }
 #intro {
-  padding-bottom: 5rem;
+  padding: 4rem 1rem 5rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 #intro p {
   font-size: 1.5rem;
@@ -90,6 +92,7 @@ nav ul {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  margin-right: 2rem;
 }
 nav a {
   color: white;
@@ -104,4 +107,19 @@ nav a:hover {
 nav li:first-child {
   flex-grow: 1;
   font-size: 1.5rem;
+  margin-left: 3rem;
+}
+.button {
+  background-color: orangered;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+.button:hover {
+  color: white;
+  background: linear-gradient(
+    172deg,
+    rgba(36, 10, 0, 0.8953782196472339) 0%,
+    rgba(121, 9, 9, 0.9037815809917717) 0%,
+    rgba(255, 147, 0, 1) 100%
+  );
 }
