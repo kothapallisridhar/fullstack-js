@@ -89,6 +89,7 @@ nav ul {
   padding: 0;
   margin: 0;
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   gap: 2rem;
@@ -105,7 +106,7 @@ nav a:hover {
   font-size: 1.2rem;
 }
 nav li:first-child {
-  flex-grow: 1;
+  flex-basis: 100%;
   font-size: 1.5rem;
   margin-left: 3rem;
 }
@@ -122,4 +123,10 @@ nav li:first-child {
     rgba(121, 9, 9, 0.9037815809917717) 0%,
     rgba(255, 147, 0, 1) 100%
   );
+}
+@media (min-width: 600px) {
+  nav li:first-child {
+    flex-grow: 1;
+    flex-basis: auto;
+  }
 }
