@@ -83,6 +83,7 @@ h6 {
 nav {
   font-size: 80%;
   padding: 1rem;
+  background-color: var(--cobalt);
 }
 nav ul {
   list-style-type: none;
