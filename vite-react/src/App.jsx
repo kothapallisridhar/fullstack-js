@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./App.css";
+import TodoForm from "./components/TodoForm";
+import TodoList from "./components/TodoList";
 
 function App() {
   const [entry, setEntry] = useState("");
@@ -15,21 +17,12 @@ function App() {
   }
   return (
     <>
-      <form onSubmit={handleFormSubmit}>
-        <label htmlFor="todo">ToDo: </label>
-        <input
-          id="todo"
-          name="todo"
-          value={entry}
-          onChange={handleInputEntry}
-          placeholder="Enter a ToDo"
-        ></input>
-      </form>
-      <ul>
-        {todos.map((todo, index) => (
-          <li key={index}>{todo}</li>
-        ))}
-      </ul>
+      <TodoForm
+        entry={entry}
+        onInputEntry={handleInputEntry}
+        onFormSubmit={handleFormSubmit}
+      />
+      <TodoList todos={todos} />
     </>
   );
 }
