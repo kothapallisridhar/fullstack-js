@@ -17,4 +17,4 @@ function printFibonacci(n) {
   }
 }
 
-printFibonacci(7);
+printFibonacci(10);
