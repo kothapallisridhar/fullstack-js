@@ -1,3 +1,13 @@
+//     *
+//    ***
+//   *****
+//  *******
+// *********
+//  *******
+//   *****
+//    ***
+//     *
+
 function upperTriangle(n) {
   for (let row = 1; row <= n; row++) {
     let stars = "";
