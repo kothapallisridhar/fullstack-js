@@ -1,3 +1,9 @@
+//     *
+//    ***
+//   *****
+//  *******
+// *********
+
 function pattern4(n) {
   for (let row = 1; row <= n; row++) {
     let stars = "";
