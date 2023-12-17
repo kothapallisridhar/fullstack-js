@@ -1,14 +1,13 @@
-let age: number = 26;
-let isLight: boolean = true;
-let greatMan: string = "Sridhar";
-
+let marks: number = 100;
+let isLight: boolean;
+let myName: string;
+let id: number | string;
 let user: object;
 
 user = {
   name: "Sri",
   age: "36",
-  id: "abc",
   isAdmin: true,
 };
-user = {};
+//user = {};
 console.log(user);
