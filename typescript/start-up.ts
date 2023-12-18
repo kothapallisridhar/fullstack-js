@@ -4,9 +4,16 @@ let myName: string;
 let id: number | string;
 let user: object;
 
+type StringOrNumber = string | number;
+type User = {
+  name: string;
+  age: number;
+  isAdmin: boolean;
+};
+type addFn = (a: number, b: number) => number;
 user = {
   name: "Sri",
-  age: "36",
+  age: 36,
   isAdmin: true,
 };
 //user = {};
