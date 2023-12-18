@@ -26,5 +26,8 @@ function calculate(
   b: number,
   calcFn: (a: number, b: number) => number
 ) {
-  calcFn(a, b);
+  const result = calcFn(a, b);
+  console.log(result);
 }
+
+calculate(6, 8, add);

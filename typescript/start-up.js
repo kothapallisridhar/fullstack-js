@@ -13,3 +13,11 @@ console.log(user);
 var hobbies;
 hobbies = ["sports", "reading", "cooking"];
 console.log(hobbies);
+function add(a, b) {
+    return a + b;
+}
+function calculate(a, b, calcFn) {
+    var result = calcFn(a, b);
+    console.log(result);
+}
+calculate(6, 8, add);
