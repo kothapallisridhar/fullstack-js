@@ -11,3 +11,9 @@ user = {
 };
 //user = {};
 console.log(user);
+
+let hobbies: Array<string>;
+
+hobbies = ["sports", "reading", "cooking"];
+
+console.log(hobbies);

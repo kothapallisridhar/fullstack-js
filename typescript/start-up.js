@@ -1,12 +1,15 @@
-var age = 26;
-var isLight = true;
-var greatMan = "Sridhar";
+var marks = 100;
+var isLight;
+var myName;
+var id;
 var user;
 user = {
     name: "Sri",
     age: "36",
-    id: "abc",
     isAdmin: true,
 };
-user = {};
+//user = {};
 console.log(user);
+var hobbies;
+hobbies = ["sports", "reading", "cooking"];
+console.log(hobbies);
