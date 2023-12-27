@@ -38,3 +38,8 @@ function calculate(
 }
 
 calculate(6, 8, add);
+
+// Union of types
+let idNum: string | number = "1212";
+idNum = 1212;
+console.log(idNum);

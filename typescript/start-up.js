@@ -5,7 +5,7 @@ var id;
 var user;
 user = {
     name: "Sri",
-    age: "36",
+    age: 36,
     isAdmin: true,
 };
 //user = {};
@@ -21,3 +21,7 @@ function calculate(a, b, calcFn) {
     console.log(result);
 }
 calculate(6, 8, add);
+// Union of types
+var idNum = "1212";
+idNum = 1212;
+console.log(idNum);
