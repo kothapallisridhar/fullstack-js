@@ -43,3 +43,17 @@ calculate(6, 8, add);
 let idNum: string | number = "1212";
 idNum = 1212;
 console.log(idNum);
+
+let ids: number[] = [1, 2, 3, 4, 5];
+console.log(ids);
+
+let hetero: (number | string | boolean)[] = ["Sridhar", 9, true];
+console.log(hetero);
+
+// arrays in the form of typed tuple
+let hetero1: [string, number, boolean] = ["Sridhar", 7, true];
+console.log(hetero1);
+
+let idAny: any = "Sridhar1212";
+idAny = 1212;
+console.log(idAny);

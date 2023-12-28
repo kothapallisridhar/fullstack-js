@@ -25,3 +25,13 @@ calculate(6, 8, add);
 var idNum = "1212";
 idNum = 1212;
 console.log(idNum);
+var ids = [1, 2, 3, 4, 5];
+console.log(ids);
+var hetero = ["Sridhar", 9, true];
+console.log(hetero);
+// arrays in the form of typed tuple
+var hetero1 = ["Sridhar", 7, true];
+console.log(hetero1);
+var idAny = "Sridhar1212";
+idAny = 1212;
+console.log(idAny);
