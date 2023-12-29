@@ -1,2 +1,3 @@
+"use strict";
 console.log("Sri Sainathuni Sarath Babuji");
-let a: number = 9;
+let a = 9;
