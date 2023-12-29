@@ -1,2 +1,6 @@
 console.log("Sri Sainathuni Sarath Babuji");
-let a: number = 9;
+let age: number = 9;
+if (age < 50) {
+  age += 10;
+}
+console.log(age);
