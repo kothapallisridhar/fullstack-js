@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import ProductCard from "../components/ProductCard";
 
 interface User {
   id: number;
@@ -19,6 +20,7 @@ const UsersPage = async () => {
           <li key={user.id}>{user.name}</li>
         ))}
       </ul>
+      <ProductCard />
     </>
   );
 };
