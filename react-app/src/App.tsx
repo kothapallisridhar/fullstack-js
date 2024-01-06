@@ -32,7 +32,9 @@ function App() {
     //   Hello <span>World</span>
     // </Alert>
     <div>
-      <Button onClick={() => console.log("Clicked!")}>My Button</Button>
+      <Button color="primary" onClick={() => console.log("Clicked!")}>
+        My Button
+      </Button>
     </div>
   );
 }
