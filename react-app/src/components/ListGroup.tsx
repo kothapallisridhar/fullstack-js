@@ -24,7 +24,7 @@ function ListGroup() {
       {items.length === 0 && <p>Not item found</p>}
       <ul className="list-group">
         {items.map((item) => (
-          <li key={item} onClick={handleClick}>
+          <li className="list-group-item" key={item} onClick={handleClick}>
             {item}
           </li>
         ))}
