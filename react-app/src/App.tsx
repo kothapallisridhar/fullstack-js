@@ -1,4 +1,5 @@
 import Alert from "./components/Alert";
+import Like from "./components/Like";
 import ListGroup from "./components/ListGroup";
 import Button from "./components/button/Button";
 import { useState } from "react";
@@ -34,12 +35,13 @@ function App() {
     //   Hello <span>World</span>
     // </Alert>
     <div>
-      {alertVisibility && (
+      {/* {alertVisibility && (
         <Alert onClose={() => setAlertVisibility(false)}>Alert</Alert>
       )}
       <Button color="primary" onClick={() => setAlertVisibility(true)}>
         My Button
-      </Button>
+      </Button> */}
+      <Like />
     </div>
   );
 }
