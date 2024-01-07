@@ -41,7 +41,7 @@ function App() {
       <Button color="primary" onClick={() => setAlertVisibility(true)}>
         My Button
       </Button> */}
-      <Like />
+      <Like onClick={() => console.log("Clicked!")} />
     </div>
   );
 }
