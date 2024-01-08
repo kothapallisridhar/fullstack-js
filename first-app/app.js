@@ -20,6 +20,5 @@ console.log(`Total Memory ${totalMemory}`);
 console.log(`Free Memory ${freeMemory}`);
 var files = fs.readdir("./", (err, files) => {
   if (err) console.log(err);
-  else console.log(`Result ${files}`);
+  else console.log(`Result: ${files}`);
 });
-console.log(files);
