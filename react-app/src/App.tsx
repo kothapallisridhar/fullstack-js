@@ -1,6 +1,8 @@
 import Alert from "./components/Alert";
+import Cart from "./components/Cart";
 import Like from "./components/Like";
 import ListGroup from "./components/ListGroup";
+import NavBar from "./components/NavBar";
 import Button from "./components/button/Button";
 import { useState } from "react";
 
@@ -23,6 +25,7 @@ function App() {
     console.log(item);
   };
   const [alertVisibility, setAlertVisibility] = useState(false);
+  const [cartItems, setCartItems] = useState(["Product1", "Product2"]);
   return (
     // <div>
     //   <ListGroup
@@ -42,6 +45,8 @@ function App() {
         My Button
       </Button> */}
       <Like onClick={() => console.log("Clicked!")} />
+      <NavBar cartItemsCount={cartItems.length} />
+      <Cart cartItems={cartItems} onClear={() => setCartItems([])} />
     </div>
   );
 }
