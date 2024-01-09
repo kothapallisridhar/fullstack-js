@@ -1,8 +1,10 @@
-const logger = require("./logger");
 const path = require("path");
 const os = require("os");
 const fs = require("fs");
 const EventEmitter = require("events");
+
+const Logger = require("./logger");
+const logger = new Logger();
 
 var pathObj = path.parse(__filename);
 console.log(pathObj);
@@ -24,12 +26,10 @@ var files = fs.readdir("./", (err, files) => {
   else console.log(`Result: ${files}`);
 });
 
-const emitter = new EventEmitter();
-
 // Register a listener
-emitter.on("messageLogged", function (arg) {
+logger.on("messageLogged", function (arg) {
   console.log("Listener called", arg);
 });
 
 // Raise an event
-emitter.emit("messageLogged", { id: 1, url: "http://" });
+logger.log("new message");
