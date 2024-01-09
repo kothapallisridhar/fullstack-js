@@ -27,9 +27,9 @@ var files = fs.readdir("./", (err, files) => {
 const emitter = new EventEmitter();
 
 // Register a listener
-emitter.on("messageLogged", function () {
-  console.log("Listener called");
+emitter.on("messageLogged", function (arg) {
+  console.log("Listener called", arg);
 });
 
 // Raise an event
-emitter.emit("messageLogged");
+emitter.emit("messageLogged", { id: 1, url: "http://" });
