@@ -16,7 +16,13 @@ export function App() {
       <p>This is Paragraph</p>
       <h2>User details</h2>
       {users.map((user) => (
-        <User name={user.name} id={user.id} age={user.age} place={user.place} />
+        <User
+          key={user.id}
+          name={user.name}
+          id={user.id}
+          age={user.age}
+          place={user.place}
+        />
       ))}
       <User name="Sridhar" age={35} id={22} place="Frankfurt" />
     </>
