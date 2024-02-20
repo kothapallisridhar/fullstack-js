@@ -22,7 +22,11 @@ class MenuComp extends React.Component {
 }
 root.render(
   <div>
-    <App />
+    <App>
+      <button>Like</button>
+      <button>Share</button>
+      <button>Subscribe</button>
+    </App>
     <Menu />
     <ul>
       <li id="i12">{name} has</li>
