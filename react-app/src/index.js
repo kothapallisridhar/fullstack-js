@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { App } from "./App";
-
 let root = ReactDOM.createRoot(document.getElementById("root"));
 
 //root.render(h1);
@@ -22,11 +21,7 @@ class MenuComp extends React.Component {
 }
 root.render(
   <div>
-    <App>
-      <button>Like</button>
-      <button>Share</button>
-      <button>Subscribe</button>
-    </App>
+    <App />
     <Menu />
     <ul>
       <li id="i12">{name} has</li>
