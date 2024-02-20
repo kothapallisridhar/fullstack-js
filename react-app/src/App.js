@@ -9,6 +9,13 @@ export function App(props) {
     { name: "Suhas", age: 12, id: 12, place: "Frankfurt" },
     { name: "Chinnu", age: 6, id: 6, place: "Stuttgart" },
   ];
+
+  function displayMessage(e, num) {
+    //alert("Button clicked: " + num);
+    console.log(e.target.value);
+    console.log(e.target);
+  }
+
   return (
     <>
       <h1 className="primary" id="heading">
@@ -27,6 +34,9 @@ export function App(props) {
       ))}
       <User name="Sridhar" age={35} id={22} place="Frankfurt" />
       <div style={{ display: "flex", gap: 10 }}>{props.children}</div>
+      <button onClick={() => alert("Hello")}>Click</button>
+      <button onClick={(e) => displayMessage(e, 10)}>Click2</button>
+      <input type="text" onChange={(e) => displayMessage(e, 10)} />
     </>
   );
 }
