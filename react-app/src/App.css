@@ -1,7 +1,7 @@
-.primary {
-  background-color: green;
-  color: white;
-}
-#heading {
-  color: orange;
+.Wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
 }
