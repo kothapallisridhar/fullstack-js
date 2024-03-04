@@ -23,3 +23,7 @@ button.plus {
 button.minus {
   background-color: red;
 }
+.primary {
+  background-color: yellowgreen;
+  color: white;
+}
