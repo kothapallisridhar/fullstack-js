@@ -8,6 +8,9 @@ export function App(props) {
       <h3>{Object.keys(product)}</h3>
       <h3>{product.title}</h3>
       <h3>{product.price}</h3>
+      <h3>{product.description}</h3>
+      <h3>{product.category}</h3>
+      <img src={product.image} width={100}></img>
     </>
   );
 }
