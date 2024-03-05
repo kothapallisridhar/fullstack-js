@@ -1,22 +1,26 @@
-import "./App.css";
-import { useState } from "react";
-import Search from "./Search";
-
-export function App(props) {
-  let [todos, setTodos] = useState(["Task1", "Task2"]);
-
-  function addTask(task) {
-    return setTodos([...todos, task]);
+import React, { Component } from "react";
+import Child from "./Child";
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      x: 10,
+      show: true,
+    };
   }
-
-  return (
-    <>
-      <Search add={addTask} />
-      <ul>
-        {todos.map((todo) => (
-          <li>{todo}</li>
-        ))}
-      </ul>
-    </>
-  );
+  static getDerivedStateFrom(props) {}
+  render() {
+    return (
+      <>
+        <h1>Parent Component</h1>
+        {this.state.show && <Child data={this.state.x} />}
+        <button onClick={() => this.setState({ x: this.state.x + 10 })}>
+          Click
+        </button>
+        <button onClick={() => this.setState({ show: false })}>Hide</button>
+        <button onClick={() => this.setState({ show: true })}>Show</button>
+      </>
+    );
+  }
 }
+export default App;
