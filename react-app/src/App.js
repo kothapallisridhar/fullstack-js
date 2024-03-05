@@ -1,16 +1,23 @@
 import "./App.css";
-import { useGetApiData } from "./utils";
+import { createContext } from "react";
+import Home from "./Home";
+import Product from "./Product";
+
+export const context = createContext();
 
 export function App(props) {
-  let product = useGetApiData("https://fakestoreapi.com/products/1");
+  let isAdmin = "true";
+  let p = {
+    name: "Canon EOS",
+    price: 333300,
+  };
+
   return (
     <>
-      <h3>{Object.keys(product)}</h3>
-      <h3>{product.title}</h3>
-      <h3>{product.price}</h3>
-      <h3>{product.description}</h3>
-      <h3>{product.category}</h3>
-      <img src={product.image} width={100}></img>
+      <context.Provider value={p}>
+        <Home></Home>
+        <Product></Product>
+      </context.Provider>
     </>
   );
 }

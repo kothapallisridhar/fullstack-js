@@ -1,10 +1,13 @@
-function Product({ id, name, aprice, dprice }) {
+import { context } from "./App.js";
+import { useContext } from "react";
+
+function Product() {
+  let data = useContext(context);
   return (
     <>
-      <p>Id: {id}</p>
-      <p>Name: {name}</p>
-      <p>Actual price: {aprice}</p>
-      <p>Discount price: {dprice}</p>
+      <h1>This is Product component</h1>
+      <h2>Name: {data.name}</h2>
+      <h2>Price: {data.price}</h2>
     </>
   );
 }
