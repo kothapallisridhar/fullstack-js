@@ -5,7 +5,7 @@ const index = ({ user }) => {
   return (
     <div>
       <main className={HomeStyles.main}>
-        <div className={HomeStyles.grid}>
+        {user && (
           <div className={HomeStyles.card}>
             <p>Name: {user.name}</p>
             <p>Email: {user.email}</p>
@@ -17,7 +17,7 @@ const index = ({ user }) => {
               {user.address.zipcode}
             </p>
           </div>
-        </div>
+        )}
       </main>
     </div>
   );
