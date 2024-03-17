@@ -1,13 +1,40 @@
-import logo from "./logo.svg";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 function App() {
   const [email, setEmail] = useState("");
-  //const [password, setPassword] = useState("");
-  const pwd = useRef();
+  const [password, setPassword] = useState("");
+  //const pwd = useRef();
+
+  const [error, setError] = useState({
+    email: "",
+    password: "",
+  });
+  const emailpattern =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+  function handleSubmit() {
+    if (email.trim() === "") {
+      setError((error) => ({ ...error, email: "Enter email address" }));
+    } else if (!emailpattern.test(email)) {
+      setError((error) => ({ ...error, email: "Enter valid email address" }));
+    } else {
+      setError((error) => ({ ...error, email: "" }));
+    }
+
+    if (password.trim() === "") {
+      setError((error) => ({ ...error, password: "Enter password" }));
+    } else if (password.trim().length < 8) {
+      setError((error) => ({
+        ...error,
+        password: "Password is minimum 8 characters",
+      }));
+    } else {
+      setError((error) => ({ ...error, password: "" }));
+    }
+  }
 
   return (
     <>
@@ -23,20 +50,22 @@ function App() {
               setEmail(e.target.value);
             }}
           />
+          {error.email && <span className="text-danger">{error.email}</span>}
         </div>
         <div className="mt-3">
           <label>Password</label>
-          <input type="password" className="form-control" ref={pwd} />
+          <input
+            type="password"
+            className="form-control"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          {error.password && (
+            <span className="text-danger">{error.password}</span>
+          )}
         </div>
         <div className="mt-3">
-          <button
-            className="btn btn-primary w-100"
-            onClick={() => {
-              console.log("Email", email);
-              console.log("Password", pwd.current.value);
-            }}
-          >
-            {" "}
+          <button className="btn btn-primary w-100" onClick={handleSubmit}>
             Login
           </button>
         </div>
