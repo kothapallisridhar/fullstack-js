@@ -4,6 +4,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import { lazy, Suspense, useState } from "react";
 const Form = lazy(() => import("./form"));
 
+// lazy loading with conditional rendering
 function App() {
   const [show, setShow] = useState(false);
   return (
