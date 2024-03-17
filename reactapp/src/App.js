@@ -13,7 +13,7 @@ function App() {
   }, []);
 
   async function getProducts() {
-    const res = await api.put("/products/17", {
+    const res = await api.delete("/products/13", {
       id: 16,
       title: "Sony TV",
       price: 640,
