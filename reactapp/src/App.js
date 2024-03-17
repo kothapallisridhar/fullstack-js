@@ -1,30 +1,24 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import { useEffect } from "react";
-import axios from "axios";
+import { lazy, Suspense, useState } from "react";
+const Form = lazy(() => import("./form"));
 
 function App() {
-  let api = axios.create({
-    baseURL: "https://fakestoreapi.com",
-  });
-  useEffect(() => {
-    getProducts();
-  }, []);
-
-  async function getProducts() {
-    const res = await api.get("/products", {
-      id: 16,
-      title: "Sony TV",
-      price: 640,
-      description: "Sony OLED TV",
-      category: "electronics",
-    });
-    console.log(res.data);
-  }
+  const [show, setShow] = useState(false);
   return (
     <>
-      <h1>Using Axios</h1>
+      <div className="text-center">
+        <h1>Lazy loading</h1>
+        {show && (
+          <Suspense>
+            <Form />
+          </Suspense>
+        )}
+        <button className="btn btn-primary" onClick={() => setShow(true)}>
+          Open Form
+        </button>
+      </div>
     </>
   );
 }
