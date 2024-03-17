@@ -13,12 +13,11 @@ function App() {
   }, []);
 
   async function getProducts() {
-    const res = await api.post("/products", {
-      id: 9,
-      title: "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
-      price: 64,
-      description:
-        "USB 3.0 and USB 2.0 Compatibility Fast data transf…ser’s hardware configuration and operating system",
+    const res = await api.put("/products/17", {
+      id: 16,
+      title: "Sony TV",
+      price: 640,
+      description: "Sony OLED TV",
       category: "electronics",
     });
     console.log(res.data);
