@@ -1,25 +1,38 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import { lazy, Suspense, useState } from "react";
-const Form = lazy(() => import("./form"));
 
-// lazy loading with conditional rendering
-function App() {
-  const [show, setShow] = useState(false);
+function User(props) {
   return (
     <>
-      <div className="text-center">
-        <h1>Lazy loading</h1>
-        {show && (
-          <Suspense>
-            <Form />
-          </Suspense>
-        )}
-        <button className="btn btn-primary" onClick={() => setShow(true)}>
-          Open Form
-        </button>
-      </div>
+      <h1>This is User Component</h1>
+      <h2>Hello {props.username}</h2>
+    </>
+  );
+}
+
+function Login() {
+  return <h1>This is Login Component</h1>;
+}
+
+function AuthCheck(Component) {
+  let authenticated = true;
+
+  return (props) => {
+    if (authenticated) {
+      return <Component {...props} />;
+    } else {
+      return <Login />;
+    }
+  };
+}
+
+const AuthChecked = AuthCheck(User);
+
+function App() {
+  return (
+    <>
+      <AuthChecked username="Suhas" />
     </>
   );
 }
