@@ -1,38 +1,26 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import PropTypes from "prop-types";
 
 function User(props) {
   return (
     <>
-      <h1>This is User Component</h1>
-      <h2>Hello {props.username}</h2>
+      <h1>Name: {props.name}</h1>
+      <h1>Age: {props.age}</h1>
     </>
   );
 }
 
-function Login() {
-  return <h1>This is Login Component</h1>;
-}
-
-function AuthCheck(Component) {
-  let authenticated = true;
-
-  return (props) => {
-    if (authenticated) {
-      return <Component {...props} />;
-    } else {
-      return <Login />;
-    }
-  };
-}
-
-const AuthChecked = AuthCheck(User);
+User.propTypes = {
+  name: PropTypes.string.isRequired,
+  age: PropTypes.number,
+};
 
 function App() {
   return (
     <>
-      <AuthChecked username="Suhas" />
+      <User name="Suhas" age={14} />
     </>
   );
 }
