@@ -11,7 +11,10 @@ function User(props) {
     </>
   );
 }
-
+User.defaultProps = {
+  name: "N/A",
+  age: "N/A",
+};
 User.propTypes = {
   name: PropTypes.string.isRequired,
   age: PropTypes.number,
@@ -20,7 +23,7 @@ User.propTypes = {
 function App() {
   return (
     <>
-      <User name="Suhas" age={14} />
+      <User name="Joy" />
     </>
   );
 }
