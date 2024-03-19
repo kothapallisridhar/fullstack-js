@@ -1,30 +1,38 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import PropTypes from "prop-types";
+import { useState } from "react";
+import ReactDOM from "react-dom";
 
-function User(props) {
-  return (
-    <>
-      <h1>Name: {props.name}</h1>
-      <h1>Age: {props.age}</h1>
-    </>
+function Modal(props) {
+  return ReactDOM.createPortal(
+    <div className="modal-overlay">
+      <div className="content">
+        <h1>Modal heading</h1>
+        <p>Modal content. Click Close to close the modal</p>
+        <button onClick={props.close} className="btn btn-danger">
+          Close
+        </button>
+      </div>
+    </div>,
+    document.body
   );
 }
-User.defaultProps = {
-  name: "N/A",
-  age: "N/A",
-};
-User.propTypes = {
-  name: PropTypes.string.isRequired,
-  age: PropTypes.number,
-};
 
 function App() {
+  const [showModal, setShowModal] = useState(false);
+
+  function toggleModal() {
+    setShowModal(!showModal);
+  }
+
   return (
-    <>
-      <User name="Joy" />
-    </>
+    <div className="app">
+      <button onClick={toggleModal} className="btn btn-primary m-5">
+        Open modal
+      </button>
+      {showModal && <Modal close={toggleModal}></Modal>}
+    </div>
   );
 }
 
