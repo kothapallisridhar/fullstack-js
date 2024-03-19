@@ -3,8 +3,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import { useReducer } from "react";
 
-function counterReducer(state, input) {
-  return state + input;
+function counterReducer(state, action) {
+  switch (action.type) {
+    case "INC":
+      return state + 1;
+    case "DEC":
+      return state - 1;
+    case "RESET":
+      return 0;
+    default:
+      return state;
+  }
 }
 
 function App() {
@@ -14,7 +23,7 @@ function App() {
     <div className="mt-4 d-flex">
       <button
         onClick={() => {
-          dispatch(-1);
+          dispatch({ type: "DEC" });
         }}
         className="btn btn-primary m-2"
       >
@@ -23,11 +32,19 @@ function App() {
       <div className="m-3">Count: {counter}</div>
       <button
         onClick={() => {
-          dispatch(1);
+          dispatch({ type: "INC" });
         }}
         className="btn btn-primary m-2"
       >
         +
+      </button>
+      <button
+        className="btn btn-danger m-2"
+        onClick={() => {
+          dispatch({ type: "RESET" });
+        }}
+      >
+        Reset
       </button>
     </div>
   );
