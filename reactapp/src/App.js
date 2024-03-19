@@ -1,37 +1,34 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import { useState } from "react";
-import ReactDOM from "react-dom";
+import { useReducer } from "react";
 
-function Modal(props) {
-  return ReactDOM.createPortal(
-    <div className="modal-overlay">
-      <div className="content">
-        <h1>Modal heading</h1>
-        <p>Modal content. Click Close to close the modal</p>
-        <button onClick={props.close} className="btn btn-danger">
-          Close
-        </button>
-      </div>
-    </div>,
-    document.body
-  );
+function counterReducer(state, input) {
+  return state + input;
 }
 
 function App() {
-  const [showModal, setShowModal] = useState(false);
-
-  function toggleModal() {
-    setShowModal(!showModal);
-  }
+  const [counter, dispatch] = useReducer(counterReducer, 0);
 
   return (
-    <div className="app">
-      <button onClick={toggleModal} className="btn btn-primary m-5">
-        Open modal
+    <div className="mt-4 d-flex">
+      <button
+        onClick={() => {
+          dispatch(-1);
+        }}
+        className="btn btn-primary m-2"
+      >
+        -
       </button>
-      {showModal && <Modal close={toggleModal}></Modal>}
+      <div className="m-3">Count: {counter}</div>
+      <button
+        onClick={() => {
+          dispatch(1);
+        }}
+        className="btn btn-primary m-2"
+      >
+        +
+      </button>
     </div>
   );
 }
