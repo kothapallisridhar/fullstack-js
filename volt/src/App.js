@@ -1,9 +1,8 @@
+import React from "react";
+import { Counter } from "./Counter";
+
 function App() {
-  return (
-    <div>
-      <h1>Welcome to my React app</h1>
-    </div>
-  );
+  return <Counter />;
 }
 
 export default App;
