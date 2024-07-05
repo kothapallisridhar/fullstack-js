@@ -1,15 +1,9 @@
-import { useState } from "react";
-
-export function ToDoList() {
-  const [text, setText] = useState("");
+export function ToDoList({ todos }) {
   return (
-    <>
-      <div>{text}</div>
-      <input
-        onChange={(event) => {
-          setText(event.target.value);
-        }}
-      ></input>
-    </>
+    <ul>
+      {todos.map((todo, index) => (
+        <li key={index}>{todo}</li>
+      ))}
+    </ul>
   );
 }
