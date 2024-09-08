@@ -15,5 +15,8 @@ function createPromiseWithTimeout() {
         
     });
 }
-y = createPromiseWithTimeout();
-console.log(y);
+let p = createPromiseWithTimeout();
+
+p.
+then(function fulfillHandler(value) { console.log("Inside fulfill handler with value:", value)}, 
+     function rejectionHandler(value) { console.log("Inside rejection hanlder with value:", value)});
