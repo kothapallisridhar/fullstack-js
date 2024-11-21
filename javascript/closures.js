@@ -1,8 +1,11 @@
 function process() {
     let i = 0;
+    let j = [1,2,3];
+    let k = 3;
     function innerProcess() {
         i += 1;
-        return i;
+        let p = j;
+        return {i, p};
     }
     return innerProcess;
 }
