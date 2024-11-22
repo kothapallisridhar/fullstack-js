@@ -35,6 +35,7 @@ const elem = <span>React Element</span>
 const HeadingComponent = () => (
     <div id='container'>
         <Title/>
+        {Title()}
         {elem}
         <h2>{number}</h2>
         <h2 className='head'>Namaste React Functional Component</h2>
