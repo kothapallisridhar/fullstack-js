@@ -28,6 +28,10 @@ const Title = () => (<h1 className='head'>
 const number = 10000;
 const elem = <span>React Element</span>
 
+// const data = api.getData()  let's say data has some malicious script which will harm systems. 
+// this kind of attack is called CSS - Cross Site Scripting.
+// JSX will sanitize and passes any malicious script like CSS - Cross Site Scripting
+
 const HeadingComponent = () => (
     <div id='container'>
         <Title/>
