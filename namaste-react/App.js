@@ -14,7 +14,7 @@ import ReactDOM from 'react-dom/client';
 // Who is converting the JSX code to React.createElement? - Babel
 
 
-const heading = (<h1 className='head'>
+const Title = () => (<h1 className='head'>
                     Namaste React using JSX 🚀
                    </h1>);
 
@@ -25,13 +25,22 @@ const heading = (<h1 className='head'>
 
 // React Functional Component is just a normal function which returns a JSX
 
-const HeadingComponent = () => {
-    return <h1>Namaste React Functional Component</h1>
-}
+const number = 10000;
+const elem = <span>React Element</span>
 
-const HeadingComponent2 = () => <h1>Namaste React Functional Component</h1>
+const HeadingComponent = () => (
+    <div id='container'>
+        <Title/>
+        {elem}
+        <h2>{number}</h2>
+        <h2 className='head'>Namaste React Functional Component</h2>
+    </div>
+)
+
+
+//const HeadingComponent2 = () => <h1>Namaste React Functional Component</h1>
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(heading);
+root.render(<HeadingComponent/>);
