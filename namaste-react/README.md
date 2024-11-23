@@ -20,3 +20,23 @@
 - Tree Shaking - remove unused code
 - Different dev and prod bundles
 
+
+# Namaste Food
+/**
+ * Header
+ * - Logo
+ * - Nav Items
+ * Body
+ * - Search
+ * - ReataurantContainer
+ *  - RestaurantCard
+ *      - Img
+ *      - Name of Res, Star rating, Cuisine, Delivery time
+ * Footer
+ * - Copyright
+ * - Links
+ * - Address
+ * - Contact
+ * 
+ */
+

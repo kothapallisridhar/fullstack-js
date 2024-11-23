@@ -1,23 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client'; 
 
-/**
- * Header
- * - Logo
- * - Nav Items
- * Body
- * - Search
- * - ReataurantContainer
- *  - RestaurantCard
- *      - Img
- *      - Name of Res, Star rating, Cuisine, Delivery time
- * Footer
- * - Copyright
- * - Links
- * - Address
- * - Contact
- * 
- */
+
 
 const Header = () => {
     return (
@@ -37,10 +21,6 @@ const Header = () => {
         </div>
     )
 }
-
-// const styleCard = {
-//     backgroundColor: '#f0f0f0'
-// }
 
 const RestaurantCard = (props) => {
     return (
