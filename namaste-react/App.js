@@ -1,51 +1,77 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client'; 
 
-// React Element 
-// React.createElement => ReactElement - JS Object => HTMLElement(render) 
+/**
+ * Header
+ * - Logo
+ * - Nav Items
+ * Body
+ * - Search
+ * - ReataurantContainer
+ *  - RestaurantCard
+ *      - Img
+ *      - Name of Res, Star rating, Cuisine, Delivery time
+ * Footer
+ * - Copyright
+ * - Links
+ * - Address
+ * - Contact
+ * 
+ */
 
-// const heading = React.createElement("h1", {id: "heading"}, "Namaste React 🚀");
+const Header = () => {
+    return (
+        <div className='header'>
+            <div className='logo-container'>
+                <img className='logo' src='https://static.vecteezy.com/system/resources/previews/047/112/083/non_2x/simple-food-logo-free-vector.jpg'/>
+            </div>
+            <div className='nav-items'>
+                <ul>
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Cart</li>
+                </ul>                
 
-// JSX - React is different and JSX is different
-// JSX makes our deveopers life easier
-// JSX is html like syntax but it is not html
-// JSX will be transpiled before it reaches browser - Parcel - Babel
-// JSX => Babel transpiles it to React.createElement => ReactElement - JS Object => HTMLElement(render) 
-// Who is converting the JSX code to React.createElement? - Babel
+            </div>
+        </div>
+    )
+}
 
+// const styleCard = {
+//     backgroundColor: '#f0f0f0'
+// }
 
-const Title = () => (<h1 className='head'>
-                    Namaste React using JSX 🚀
-                   </h1>);
-
-
-// React Component
-// Class Based Component - OLD 
-// Functional Component - NEW
-
-// React Functional Component is just a normal function which returns a JSX
-
-const number = 10000;
-const elem = <span>React Element</span>
-
-// const data = api.getData()  let's say data has some malicious script which will harm systems. 
-// this kind of attack is called CSS - Cross Site Scripting.
-// JSX will sanitize and passes any malicious script like CSS - Cross Site Scripting
-
-const HeadingComponent = () => (
-    <div id='container'>
-        <Title/>
-        {Title()}
-        {elem}
-        <h2>{number}</h2>
-        <h2 className='head'>Namaste React Functional Component</h2>
-    </div>
-)
-
-
-//const HeadingComponent2 = () => <h1>Namaste React Functional Component</h1>
-
+const RestaurantCard = (props) => {
+    return (
+        <div className='res-card' style={{backgroundColor: '#f0f0f0'}}>
+            <img className='res-logo' alt='res-logo' src='https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/7/23/091216a6-dce4-4e17-bf57-53ddcda3c897_928546.jpg'/>
+            <h3>Meghana Foods</h3>
+            <h4>Biryani, North Indian, Asian</h4>
+            <h4>4.5 stars</h4>
+            <h4>38 minutes</h4>
+        </div>
+    )
+}
+const Body = () => {
+    return (
+        <div className='body'>
+            <div className='search'>Search</div>
+            <div className='res-container'>
+                <RestaurantCard/><RestaurantCard/>
+            </div>
+        </div>
+    )
+}
+const AppLayout = () => {
+    return (
+        <div className='app'>
+            <Header/>
+            <Body/>
+        </div>
+    )
+}
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<HeadingComponent/>);
+root.render(<AppLayout/>);
