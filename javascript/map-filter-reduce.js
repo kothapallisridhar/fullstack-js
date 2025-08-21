@@ -33,7 +33,7 @@ const users = [
     { firstName: "Sridhar", lastName: "K", age: 25},
     { firstName: "Adi", lastName: "N", age: 46},
     { firstName: "Krishna", lastName: "R", age: 47},
-    { firstName: "Surya", lastName: "Kumar", age: 58},
+    { firstName: "Surya", lastName: "Kumar", age: 28},
 ];
 
 // list of full names
@@ -51,3 +51,9 @@ const output1 = users.reduce(function(acc, curr) {
 }, {})
 
 console.log(output1);
+
+// first name of all the people whose age is < 30
+
+const firstNames = users.filter(x => x.age < 30).map(x => x.firstName);
+
+console.log("First names of folks whose age is 30: ", firstNames);
