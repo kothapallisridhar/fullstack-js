@@ -52,8 +52,12 @@ const output1 = users.reduce(function(acc, curr) {
 
 console.log(output1);
 
+// using filter
 // first name of all the people whose age is < 30
 
 const firstNames = users.filter(x => x.age < 30).map(x => x.firstName);
 
 console.log("First names of folks whose age is 30: ", firstNames);
+
+// using reduce
+// first name of all the people whose age is < 30
