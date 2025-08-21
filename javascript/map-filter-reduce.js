@@ -29,3 +29,14 @@ const maxNum = arr.reduce(function(max, curr) {
 },0);
 console.log("Max number is: ", maxNum);
 
+const users = [
+    { firstName: "Sridhar", lastName: "K", age: 25},
+    { firstName: "Adi", lastName: "N", age: 26},
+    { firstName: "Krishna", lastName: "R", age: 27},
+    { firstName: "Surya", lastName: "Kumar", age: 28},
+];
+
+// list of full names
+const fullNames = users.map(x => x.firstName + " " + x.lastName);
+console.log(fullNames);
+
