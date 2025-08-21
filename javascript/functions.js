@@ -36,7 +36,16 @@ ap(1,2) // 1,2 are arguments
 
 
 // First Class Functions
-
-
+// you can pass functions as an argument to another function,
+// you can return a function from a function
+/* 
+ the ability of functions 
+    to be used as values and 
+    can be passed to another functions as arguments and 
+    can be returned from functions
+ 
+ functions are 
+    first class citizens
+*/
 
 // Arrow Functions
