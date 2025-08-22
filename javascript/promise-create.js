@@ -1,11 +1,15 @@
 const cart = ["shoes", "shorts", "shirts"];
 
 const promise = createOrder(cart); // orderId
+console.log(promise);
 
 promise.then(function(orderId) {
 
     console.log("OrderId: ", orderId)
     //proceedToPayment(orderId);
+})
+.catch(function(err) {
+    console.log(err.message);
 })
 
 function createOrder(cart) {
