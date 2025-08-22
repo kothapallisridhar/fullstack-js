@@ -2,9 +2,7 @@ const cart = ["shoes", "shorts", "shirts"];
 
 createOrder(cart)
 .then(function(orderId) {
-
     console.log("OrderId: ", orderId)
-    //proceedToPayment(orderId);
     return orderId;
 })
 .then(function(orderId) {
