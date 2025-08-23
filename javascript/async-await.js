@@ -1,4 +1,6 @@
 
+const API_URL = "https://api.github.com/users/kothapallisridhar";
+const API_URL2 = "https://api.github.com/users/akshaymarch7";
 
 const p1 = new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -25,10 +27,23 @@ async function handlePromise() {
     const val2 = await p2;
     console.log("Namaste JavaScript 2");
     console.log(val2);
+}
 
+async function handlePromise2() {
+
+    try {
+        const data = await fetch(API_URL);
+        const jsonvalue = await data.json()
+        console.log(jsonvalue);    
+    } catch(err) {
+        console.log(err);
+    }
+    
+    // fetch() => Response.json() => jsonvalue
 }
 
 //handlePromise();
+handlePromise2();
 
 function getData() {
     // JS engine will not wait for the promise to be resolved
@@ -37,4 +52,4 @@ function getData() {
     console.log("Namaste JavaScript");
 }
 
-getData();
+//getData();
