@@ -26,11 +26,7 @@
  *  it will wait for all other Proimses to be settled
  *  after all Promises are done, then 
  *  it will give you all the results irrespective of success of failure. 
- * 
- *  
- * 
  */  
-
 
 // Promise.race([p1, p2, p3])
 /**
