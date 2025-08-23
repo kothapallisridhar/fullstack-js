@@ -52,6 +52,7 @@ const p1 = new Promise((resolve, reject) => {
 
     setTimeout(() => {
         resolve("P1 success");
+        //reject("P1 fail")
     }, 3000);
 
 })
