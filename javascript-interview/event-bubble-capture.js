@@ -2,16 +2,17 @@
 document.querySelector("#grandparent")
 .addEventListener("click", (e) => {
     console.log("Grand parent clicked!");
-}, false) 
+    e.stopPropagation();
+}, true) 
 
 document.querySelector("#parent")
 .addEventListener("click", (e) => {
     console.log("Parent clicked!");
     //e.stopPropagation();
-}, false) 
+}, true) 
 
 document.querySelector("#child")
 .addEventListener("click", (e) => {
     console.log("Child clicked!");
-    e.stopPropagation();
-}, false) 
+    //e.stopPropagation();
+}, true) 
