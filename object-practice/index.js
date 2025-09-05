@@ -21,3 +21,7 @@ console.log(dhoni.name);
 console.log(dhoni.stats.runs);
 console.log(dhoni.teams[0]);
 console.log(dhoni.retire());
+
+console.log(Object.keys(dhoni));
+console.log(Object.values(dhoni));
+console.log(Object.entries(dhoni));
