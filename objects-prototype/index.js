@@ -27,7 +27,6 @@ let student = {
     name: "Sridhar",
     phone: 8877788777,
     address: "Munich, Germany",
-    marks: 99,
 }
 
 console.log(student.hasOwnProperty("marks"));
@@ -49,3 +48,17 @@ for(let key in student) {
 for(let key in student) {
     console.log(student[key]); // value
 }
+console.log("----------------");
+
+student1.marks = 100;
+
+console.log(Object.keys(student1));
+
+for(let key in student1) {
+    console.log(key); // key
+}
+
+// Object.freeze()  --> to make an object immutable
+// Object.seal() --> can update existing object properties
+
+
