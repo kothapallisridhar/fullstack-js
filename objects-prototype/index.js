@@ -17,3 +17,6 @@ console.log(dog.walk());
 console.log(Object.getPrototypeOf(dog));
 
 console.log(Object.getPrototypeOf(animal));
+
+
+

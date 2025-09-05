@@ -25,3 +25,12 @@ console.log(dhoni.retire());
 console.log(Object.keys(dhoni));
 console.log(Object.values(dhoni));
 console.log(Object.entries(dhoni));
+
+let student = {
+    name: "Sridhar",
+    phone: 8877788777,
+    address: "Munich, Germany",
+    marks: 99,
+}
+
+console.log(student.hasOwnProperty("marks"));
