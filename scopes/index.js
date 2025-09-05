@@ -1,12 +1,4 @@
-let globalVar = "I am in hte global scope";
-
-function outerFunction() {
-    let outerVar = "I am in the outer scope";
-
-    function innerFunction() {
-        let inVar = "I am in the inner " 
-    }
-}
+// Global execution context (GEC)
 
 
 // hoisting
@@ -31,3 +23,9 @@ function test() {
 }
 
 test();
+console.log(globalThis); // window
+var userName = "Sridhar";
+let marks = 100;
+let percentage = 99.8;
+console.log(window === this); // true
+// let and const are hoisted but they will be in TDZ(Temporal Dead Zone)
