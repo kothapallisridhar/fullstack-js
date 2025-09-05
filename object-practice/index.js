@@ -34,3 +34,10 @@ let student = {
 }
 
 console.log(student.hasOwnProperty("marks"));
+
+const student1 = Object.create(student);
+console.log(student1);
+console.log(student1.hasOwnProperty("marks")); // "marks" property is in the parent.
+console.log(student1.marks);
+
+console.log("marks" in student1); // checks the "marks" in the entire prototype chain
