@@ -18,3 +18,8 @@ const target = {a: 1};
 Object.assign(target, {b: 2}, {c: 3});
 console.log("target: ", target);
 
+let student2 = {...student};
+console.log(student2);
+
+let obj4 = {...obj1, ...obj2};
+console.log(obj4);
