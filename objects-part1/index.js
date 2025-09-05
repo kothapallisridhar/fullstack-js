@@ -32,3 +32,13 @@ console.log(student1);
 console.log(Student.COLLEGE_NAME);
 let obj = new Object();
 console.log(obj);
+
+// object creattion using object literals
+
+let student = {
+    name: "Sridhar",
+    phone: 8877788777,
+    address: "Berlin, Germany",
+}
+
+console.log(student);
