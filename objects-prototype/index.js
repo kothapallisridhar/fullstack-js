@@ -18,6 +18,10 @@ console.log(Object.getPrototypeOf(dog));
 
 console.log(Object.getPrototypeOf(animal));
 
+let emptyObject = {};
+Object.setPrototypeOf(emptyObject, null);
+console.log("emptyObject: ", emptyObject);
+
 let student = {
     name: "Sridhar",
     phone: 8877788777,
