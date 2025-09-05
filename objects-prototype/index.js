@@ -1,3 +1,4 @@
+"use strict"
 
 let animal = {
     eats: true,
@@ -38,4 +39,13 @@ console.log(student1.marks);
 
 console.log("marks" in student1); // checks the "marks" in the entire prototype chain
 
+console.log(Object.keys(student));
+console.log(Object.values(student));
 
+for(let key in student) {
+    console.log(key); // key
+}
+
+for(let key in student) {
+    console.log(student[key]); // value
+}
