@@ -199,3 +199,11 @@ function ty<T, S>(item: T, another: S): T {
 }
 
 console.log(ty<string, number>("Sridhar", 10));
+
+interface Person {
+    namePerson: string;
+    agePerson: number;
+    address: string;
+}
+
+type PersonKeys = string | number | string
