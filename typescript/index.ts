@@ -127,9 +127,10 @@ interface ColoredRectangle extends Rectangle {
     color: string,
 }
 
-const rectangle:Rectangle = {
+const rectangle:ColoredRectangle = {
     height: 20,
     width: 10,
+    color: 'golden',
 }
 
 
