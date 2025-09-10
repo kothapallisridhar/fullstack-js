@@ -1,8 +1,8 @@
-function addTwo(num: number) {
+function addTwo(num: number): number {
     return num + 2
 }
 
-function getUpper(val: string) {
+function getUpper(val: string): string {
     return val.toUpperCase()
 }
 
