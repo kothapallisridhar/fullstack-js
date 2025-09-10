@@ -92,3 +92,17 @@ function multiply(a, b, c) {
     return a * b * (c || 1);
 }
 console.log(multiply(3, 5));
+function divide(_a) {
+    var dividend = _a.dividend, divisor = _a.divisor;
+    return dividend / divisor;
+}
+console.log(divide({ dividend: 10, divisor: 2 }));
+function add(a, b) {
+    var rest = [];
+    for (var _i = 2; _i < arguments.length; _i++) {
+        rest[_i - 2] = arguments[_i];
+    }
+    console.log(rest);
+    return a + b + rest.reduce(function (p, c) { return p + c; }, 0);
+}
+console.log(add(1, 2, 3, 4, 5, 6, 7));

@@ -147,3 +147,16 @@ function multiply(a: number, b: number, c?: number):number {
 }
 
 console.log(multiply(3,5));
+
+function divide({dividend, divisor}: {dividend:number, divisor: number}) {
+    return dividend/divisor;
+}
+
+console.log(divide({dividend:10,divisor: 2}));
+
+function add(a:number, b:number, ...rest: number[]) {
+    console.log(rest);
+    return a + b + rest.reduce((p, c) => p + c, 0); 
+}
+
+console.log(add(1,2,3,4,5,6,7));
