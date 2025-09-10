@@ -133,5 +133,15 @@ const rectangle:ColoredRectangle = {
     color: 'golden',
 }
 
+let status:string|number = 404; // union 
+status = "client error"; // union. either string or number type can be assigned
 
+function getTime():number {
+    return new Date().getTime();
+}
 
+console.log(getTime());
+
+function multiply(a: number, b: number):number {
+    return a * b;
+}
