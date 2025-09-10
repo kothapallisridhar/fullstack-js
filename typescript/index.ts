@@ -192,3 +192,11 @@ const employee = new Employee("Bob", "Developer");
 console.log(employee.getDetails());
 //console.log(person.name);
 console.log(employee.getName());
+
+// generics
+function ty<T>(item: T): T {
+    return item;
+}
+
+console.log(ty<string>("Sridhar"));
+console.log(ty<number>(10));
