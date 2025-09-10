@@ -160,3 +160,35 @@ function add(a:number, b:number, ...rest: number[]) {
 }
 
 console.log(add(1,2,3,4,5,6,7));
+
+class Person {
+   protected name: string = '';
+   protected id: string = '';
+   private age: number = 0;
+   public constructor(name: string) {
+    this.name = name;
+   }
+   public getName(): string {
+    return this.name;
+   }
+}
+
+const person = new Person('Jane');
+//person.name = 'Lene';
+//person.age = 10;
+console.log(person);
+console.log(person.getName());
+
+class Employee extends Person {
+    constructor(name: string, public jobTitle: string) {
+        super(name);
+    }
+    public getDetails(): string {
+        return `${this.name} is a ${this.jobTitle}`;
+    }
+}
+
+const employee = new Employee("Bob", "Developer");
+console.log(employee.getDetails());
+//console.log(person.name);
+console.log(employee.getName());
