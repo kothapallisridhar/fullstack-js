@@ -142,6 +142,8 @@ function getTime():number {
 
 console.log(getTime());
 
-function multiply(a: number, b: number):number {
-    return a * b;
+function multiply(a: number, b: number, c?: number):number {
+    return a * b * (c||1);
 }
+
+console.log(multiply(3,5));

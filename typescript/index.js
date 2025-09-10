@@ -61,3 +61,34 @@ console.log('South', CardinalDirections.South);
 console.log('West', CardinalDirections.West);
 var currentDirection = CardinalDirections.North;
 console.log(currentDirection);
+var StatusCodes;
+(function (StatusCodes) {
+    StatusCodes[StatusCodes["NotFound"] = 404] = "NotFound";
+    StatusCodes[StatusCodes["Success"] = 200] = "Success";
+    StatusCodes[StatusCodes["Accepted"] = 202] = "Accepted";
+    StatusCodes[StatusCodes["BadRequest"] = 400] = "BadRequest";
+})(StatusCodes || (StatusCodes = {}));
+var sume = 'Sunil';
+var carYear = 2025;
+var carMake = 'Porsche';
+var carModel = 'Panamera';
+var car2 = {
+    year: carYear,
+    make: carMake,
+    mode: carModel,
+};
+var rectangle = {
+    height: 20,
+    width: 10,
+    color: 'golden',
+};
+var status = 404; // union 
+status = "client error"; // union. either string or number type can be assigned
+function getTime() {
+    return new Date().getTime();
+}
+console.log(getTime());
+function multiply(a, b, c) {
+    return a * b * (c || 1);
+}
+console.log(multiply(3, 5));
