@@ -154,8 +154,8 @@ var employee = new Employee("Bob", "Developer");
 console.log(employee.getDetails());
 //console.log(person.name);
 console.log(employee.getName());
-function ty(item) {
+// generics
+function ty(item, another) {
     return item;
 }
-console.log(ty("Sridhar"));
-console.log(ty(10));
+console.log(ty("Sridhar", 10));

@@ -194,9 +194,8 @@ console.log(employee.getDetails());
 console.log(employee.getName());
 
 // generics
-function ty<T>(item: T): T {
+function ty<T, S>(item: T, another: S): T {
     return item;
 }
 
-console.log(ty<string>("Sridhar"));
-console.log(ty<number>(10));
+console.log(ty<string, number>("Sridhar", 10));
